@@ -12,6 +12,9 @@ const App = () => {
     setTask(null);
 
   }
+  
+  
+  {/*this function is for deleting shoping list*/}
     const completeTask = (index) => {
         let itemsCopy = [...taskItems];
         itemsCopy.splice(index, 1);
@@ -22,7 +25,7 @@ const App = () => {
 
   return (
 
-
+    {/*ScrollView for scrolling the screen */}
     <ScrollView style={styles.container}>
       {/* Shoping List */}
       <View style={styles.shopingWrapper}>
