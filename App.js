@@ -12,9 +12,6 @@ const App = () => {
     setTask(null);
 
   }
-  
-  
-  {/*this function is for deleting shoping list*/}
     const completeTask = (index) => {
         let itemsCopy = [...taskItems];
         itemsCopy.splice(index, 1);
@@ -25,7 +22,7 @@ const App = () => {
 
   return (
 
-    {/*ScrollView for scrolling the screen */}
+
     <ScrollView style={styles.container}>
       {/* Shoping List */}
       <View style={styles.shopingWrapper}>
@@ -52,10 +49,10 @@ const App = () => {
             taskItems.map((item, index) => {
 
               return(
-                <TouchableOpacity key={index}  onPress={()=> completeTask(index)}>
+                <TouchableOpacity key={index} onPress={()=> completeTask(index)}>
 
                    
-                       <Task text={item} />
+                       <Task   key={index} text={item} />
 
 
 
